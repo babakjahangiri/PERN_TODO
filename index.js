@@ -1,11 +1,11 @@
 const express = require('express');
+require('dotenv').config();
 const app = express();
 const cors = require('cors');
 const pool = require('./db');
 const bodyParser = require('body-parser');
 const path = require('path');
 const { response } = require('express');
-require('dotenv').config();
 
 //Midlleware
 app.use(cors());
