@@ -7,8 +7,9 @@ const EditTodo = ({ todo }) => {
     e.preventDefault();
     try {
       const body = { description };
+
       const response = await fetch(
-        `http://${process.env.PUBLIC_URL}/todo/${todo.todo_id}`,
+        `${process.env.PUBLIC_URL}/todo/${todo.todo_id}`,
         {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },

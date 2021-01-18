@@ -8,7 +8,7 @@ const AddTodo = () => {
 
     try {
       const body = { description };
-      const response = await fetch('http://localhost:5000/todo', {
+      const response = await fetch(`${process.env.PUBLIC_URL}/todo`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),
