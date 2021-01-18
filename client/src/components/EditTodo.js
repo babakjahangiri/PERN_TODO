@@ -8,7 +8,7 @@ const EditTodo = ({ todo }) => {
     try {
       const body = { description };
       const response = await fetch(
-        `http://localhost:5000/todo/${todo.todo_id}`,
+        `http://${process.env.PUBLIC_URL}/todo/${todo.todo_id}`,
         {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
